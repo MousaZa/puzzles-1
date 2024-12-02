@@ -8,6 +8,17 @@ import 'package:puzzles/stages/second_install.dart';
 class MyApp extends GetMaterialApp {
     MyApp() : super(
         debugShowCheckedModeBanner: false,
+        locale: Locale('ar', 'SA'),
+        theme: ThemeData(
+            scaffoldBackgroundColor: Colors.black,
+            cardColor: Colors.black,
+            floatingActionButtonTheme: FloatingActionButtonThemeData(
+                backgroundColor: Colors.grey,
+                foregroundColor: Colors.black
+            ),
+            dialogBackgroundColor: Colors.white,
+
+        ),
         getPages: [
             GetPage(name: '/', page: () => HomePage()),
             GetPage(name: '/first-images', page: () => FirstImages()),

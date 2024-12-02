@@ -1,6 +1,7 @@
 import 'package:animated_vector/animated_vector.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:puzzles/widgets/dialog.dart';
 import 'package:rive/rive.dart';
 
 class HomePage extends StatelessWidget {
@@ -35,17 +36,18 @@ class HomePage extends StatelessWidget {
                 padding: EdgeInsets.all(5),
                 child: Container(
                   // color: Colors.black.withOpacity(.7),
-                  child: MaterialButton(
-                    onPressed: () {
-                      Get.toNamed('/first-images');
-                    },
-                    child: Text("بــلّشنا", style: TextStyle(color: Colors.white, fontSize: 20,fontWeight: FontWeight.bold),),
-                  ),
+                  child:  Text("بــلّشنا", style: TextStyle(color: Colors.white, fontSize: 20,fontWeight: FontWeight.bold),),
                 ),
               ),
             ],
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showMyDialog(context,"بسم الله", "/first-images");
+        },
+        child: Icon(Icons.arrow_forward),
       ),
     );
   }
