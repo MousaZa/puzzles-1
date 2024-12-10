@@ -29,6 +29,6 @@ class MyApp extends GetMaterialApp {
             GetPage(name: '/fifth-poem', page: () => FifthPoem()),
         ],
         title: "My App",
-        initialRoute: '/fifth-poem',
+        initialRoute: '/',
     );
 }

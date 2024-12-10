@@ -21,6 +21,10 @@ class HomePage extends StatelessWidget {
               RiveAnimation.asset(
                 'assets/work.riv',
                 fit: BoxFit.fitHeight,
+                animations: [
+                  'StatueMove',
+                ],
+                speedMultiplier: 2,
               ),
               // Container(
               //   width: double.infinity,
