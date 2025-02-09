@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   get: ^4.6.6
   animated_vector: ^0.2.0
+  firebase_core: ^3.10.0
+  path_provider: ^2.0.11
   rive: ^0.13.19
 
 dev_dependencies:

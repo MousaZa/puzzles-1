@@ -32,7 +32,7 @@ class FirstImages extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          showMyDialog(context, "فايق يا هوا", "/second-install");
+          showMyDialog(context, ["فايق يا هوا","فايق ياهوا","فايق يا هوى","فايق ياهوى"], "/second-install");
         },
         child: Icon(Icons.arrow_forward),
       ),

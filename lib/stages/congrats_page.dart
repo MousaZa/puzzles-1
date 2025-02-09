@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import 'package:puzzles/widgets/dialog.dart';
 import 'package:rive/rive.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class CongratsPage extends StatelessWidget {
+  const CongratsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +19,19 @@ class HomePage extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               RiveAnimation.asset(
-                'assets/work.riv',
+                'assets/last.riv',
                 fit: BoxFit.fitHeight,
+                stateMachines: ['State Machine 1'],
                 animations: [
-                  'StatueMove',
+                  'Idle',
+                  'MouseMove',
+                  'UrloOUT',
+                  'UrloLOOP',
+                  'UrloIN',
+                  'OcchiSxDx',
+                  'OcchiSuGiu',
+                  'State Machine 1',
+
                 ],
                 speedMultiplier: 2,
               ),
@@ -38,20 +47,15 @@ class HomePage extends StatelessWidget {
                 // padding: EdgeInsets.all(10),
                 alignment: Alignment.center,
                 padding: EdgeInsets.all(5),
+                margin: EdgeInsets.only(bottom: 400),
                 child: Container(
                   // color: Colors.black.withOpacity(.7),
-                  child:  Text("بــلّشنا", style: TextStyle(color: Colors.white, fontSize: 20,fontWeight: FontWeight.bold),),
+                  child:  Text("ياخي كفوين", style: TextStyle(color: Colors.white, fontSize: 20,fontWeight: FontWeight.bold),),
                 ),
               ),
             ],
           ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          showMyDialog(context,["بسم الله"], "/first-images");
-        },
-        child: Icon(Icons.arrow_forward),
       ),
     );
   }

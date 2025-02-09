@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:puzzles/widgets/colored_bit.dart';
 
 class ColoredBitMap extends StatelessWidget {
-  const ColoredBitMap({super.key, required this.color, required this.value, required this.size});
+  const ColoredBitMap({super.key, required this.color, required this.value, required this.size, required this.transparent});
   final Color color;
+  final bool transparent ;
   final String value;
   final double size ;
   @override
@@ -14,7 +15,7 @@ class ColoredBitMap extends StatelessWidget {
         children: value.characters.map((e) {
           return ColoredBit(
             size: size,
-            color: e == " " ?  Colors.black : e == "1" ? color : Colors.white,
+            color: e == " " ?  Colors.black : e == "1" ? color : transparent ? Colors.transparent : Colors.white,
           );
         }).toList(),
       ),
